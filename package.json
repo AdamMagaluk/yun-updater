@@ -1,15 +1,32 @@
 {
   "name": "yun-updater",
-  "version": "0.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Program Arduino Yun through Node.js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Adam Magaluk <AdamMagaluk@gmail.com>",
   "license": "BSD-2-Clause",
   "dependencies": {
     "scp": "0.0.3",
-    "ssh2": "~0.2.20"
-  }
+    "ssh2": "~0.2.20",
+    "extend": "~1.2.1",
+    "pipeworks": "~1.2.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/AdamMagaluk/yun-updater.git"
+  },
+  "keywords": [
+    "yun",
+    "arduino",
+    "remote",
+    "programming"
+  ],
+  "bugs": {
+    "url": "https://github.com/AdamMagaluk/yun-updater/issues"
+  },
+  "homepage": "https://github.com/AdamMagaluk/yun-updater"
 }
