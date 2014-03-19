@@ -1,14 +1,14 @@
-# Yun Updater
+# Yun Programmer
 
 
 ## Install
 
-`npm install yunupdater`
+`npm install yun-programmer`
 
 ## Usage
 
 ```js
-var YunProgrammer = require('./index');
+var YunProgrammer = require('yun-programmer');
 
 var p = new YunProgrammer({
   host : 'arduino.local',

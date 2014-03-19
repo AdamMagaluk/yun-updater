@@ -1,5 +1,5 @@
 {
-  "name": "yun-updater",
+  "name": "yun-programmer",
   "version": "0.0.1",
   "description": "Program Arduino Yun through Node.js",
   "main": "index.js",
