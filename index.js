@@ -39,7 +39,6 @@ YunProgrammer.prototype.flash = function(cb){
 
 
 YunProgrammer.prototype._upload = function(ctx,cb){
-  console.log('starting upload')
   ctx.path = '~/.tmp-sketch.hex';
   scp.send(ctx, function (err) {
     if (err)
@@ -50,7 +49,6 @@ YunProgrammer.prototype._upload = function(ctx,cb){
 
 YunProgrammer.prototype._merge = function(ctx,cb){
   ctx.log = '';
-  console.log('starting merge')
   var c = new Connection();
   c.on('ready', function() {
     c.exec('merge-sketch-with-bootloader.lua '+ ctx.path, function(err, stream) {
@@ -80,7 +78,6 @@ YunProgrammer.prototype._merge = function(ctx,cb){
 };
 
 YunProgrammer.prototype._program = function(ctx,cb){
-  console.log('starting program')
   var c = new Connection();
   c.on('ready', function() {
     c.exec('run-avrdude '+ ctx.path, function(err, stream) {
@@ -92,7 +89,6 @@ YunProgrammer.prototype._program = function(ctx,cb){
 	c.end();
 	if(code !== 0)
 	  throw new Error('Merge process did not exit with code 0');
-	console.log('calling cb' , ctx)
 	cb(ctx);
       });
     });
